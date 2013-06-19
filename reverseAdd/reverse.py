@@ -1,0 +1,18 @@
+import sys
+
+lines = open(sys.argv[1])
+
+def reverse(n):
+	return int(str(n)[::-1])
+
+def isPalindrome(n):
+	return n == reverse(n)
+
+for line in lines:l
+	x = int(line.strip())
+	i = 0
+	while not(isPalindrome(x)):
+		x += reverse(x)
+		i += 1
+	print i, x
+
